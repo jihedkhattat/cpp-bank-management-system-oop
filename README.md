@@ -25,6 +25,8 @@ The application allows bank employees to manage clients, perform financial trans
 ### User Management
 
 * User authentication and login
+* Login activity logging
+* View login register history
 * Add new users
 * Update user information
 * Delete users
@@ -36,12 +38,14 @@ The application allows bank employees to manage clients, perform financial trans
 * Role-based access control
 * User-specific permissions
 * Restrict access to system features
+* Permission-controlled Login Register access
 * Full-access administrator accounts
 
 ### Data Persistence
 
 * Clients stored in `Clients.txt`
 * Users stored in `Users.txt`
+* Login history stored in `LoginRegister.txt`
 * Automatic file loading and saving
 
 ## Technologies Used
@@ -87,6 +91,7 @@ The application allows bank employees to manage clients, perform financial trans
 * `clsWithdrawScreen.h`
 * `clsTotalBalancesScreen.h`
 * `clsManageUsersScreen.h`
+* `clsLoginRegisterScreen.h`
 * `clsListUsersScreen.h`
 * `clsAddNewUserScreen.h`
 * `clsDeleteUserScreen.h`
@@ -98,6 +103,7 @@ The application allows bank employees to manage clients, perform financial trans
 * `Global.h`
 * `Clients.txt`
 * `Users.txt`
+* `LoginRegister.txt`
 * `main.cpp`
 
 ## Development Environment
@@ -113,6 +119,7 @@ This project was developed using **Microsoft Visual Studio** and utilizes Micros
 ```text
 Clients.txt
 Users.txt
+LoginRegister.txt
 ```
 
 3. Build the project:
