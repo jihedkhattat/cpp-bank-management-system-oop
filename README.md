@@ -2,7 +2,7 @@
 
 A console-based Bank Management System developed in C++ using Object-Oriented Programming (OOP) principles.
 
-The application allows bank employees to manage clients, perform financial transactions, and administer system users through a secure login system with permission-based access control. All data is stored persistently using text files.
+The application allows bank employees to manage clients, perform financial transactions (including account transfers), track transfer history, and administer system users through a secure login system with permission-based access control. All data is stored persistently using text files.
 
 ## Features
 
@@ -19,8 +19,11 @@ The application allows bank employees to manage clients, perform financial trans
 
 * Deposit money
 * Withdraw money
+* Transfer money between client accounts
 * Display total balances
 * Automatically update account balances
+* Record transfer operations in a transfer log
+* View transfer history and transaction details
 
 ### User Management
 
@@ -46,6 +49,7 @@ The application allows bank employees to manage clients, perform financial trans
 * Clients stored in `Clients.txt`
 * Users stored in `Users.txt`
 * Login history stored in `LoginRegister.txt`
+* Transfer history stored in `TransferLog.txt`
 * Automatic file loading and saving
 
 ## Technologies Used
@@ -90,6 +94,8 @@ The application allows bank employees to manage clients, perform financial trans
 * `clsDepositScreen.h`
 * `clsWithdrawScreen.h`
 * `clsTotalBalancesScreen.h`
+* `clsTransferScreen.h`
+* `clsTransferLogScreen.h`
 * `clsManageUsersScreen.h`
 * `clsLoginRegisterScreen.h`
 * `clsListUsersScreen.h`
@@ -104,6 +110,7 @@ The application allows bank employees to manage clients, perform financial trans
 * `Clients.txt`
 * `Users.txt`
 * `LoginRegister.txt`
+* `TransferLog.txt`
 * `main.cpp`
 
 ## Development Environment
@@ -120,6 +127,7 @@ This project was developed using **Microsoft Visual Studio** and utilizes Micros
 Clients.txt
 Users.txt
 LoginRegister.txt
+TransferLog.txt
 ```
 
 3. Build the project:
@@ -165,6 +173,7 @@ This project demonstrates:
 * Modular software architecture
 * Banking transaction processing
 * Multi-screen console application development
+* Transaction audit logging
 
 ## Key OOP Concepts Applied
 
