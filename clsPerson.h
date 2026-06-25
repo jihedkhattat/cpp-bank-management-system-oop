@@ -2,10 +2,11 @@
 
 #include <iostream>
 #include <string>
+#include "InterfaceCommunication.h"
 
 using namespace std;
 
-class clsPerson
+class clsPerson : public InterfaceCommunication
 {
 private:
     string _FirstName;
@@ -73,5 +74,20 @@ public:
     string FullName()
     {
         return _FirstName + " " + _LastName;
+    }
+
+    void SendEmail(string Title, string Body)
+    {
+        // Email sending logic goes here.
+    }
+
+    void SendFax(string Title, string Body)
+    {
+        // Fax sending logic goes here.
+    }
+
+    void SendSMS(string Title, string Body)
+    {
+        // SMS sending logic goes here.
     }
 };
