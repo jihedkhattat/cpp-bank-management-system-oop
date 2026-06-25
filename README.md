@@ -2,7 +2,7 @@
 
 A console-based Bank Management System developed in C++ using Object-Oriented Programming (OOP) principles.
 
-The application allows bank employees to manage clients, perform financial transactions (including account transfers), track transfer history, and administer system users through a secure login system with permission-based access control. All data is stored persistently using text files.
+The application allows bank employees to manage clients, perform financial transactions (including account transfers), track transfer history, and administer system users through a secure login system with permission-based access control. User passwords are stored in encrypted form in the data file, and the project also includes a practical example of using an abstract interface for communication-related behavior.
 
 ## Features
 
@@ -35,6 +35,7 @@ The application allows bank employees to manage clients, perform financial trans
 * Delete users
 * Find users
 * List all users
+* Store user passwords in encrypted form inside `Users.txt`
 
 ### Permission System
 
@@ -47,7 +48,7 @@ The application allows bank employees to manage clients, perform financial trans
 ### Data Persistence
 
 * Clients stored in `Clients.txt`
-* Users stored in `Users.txt`
+* Users stored in `Users.txt` with encrypted passwords
 * Login history stored in `LoginRegister.txt`
 * Transfer history stored in `TransferLog.txt`
 * Automatic file loading and saving
@@ -60,6 +61,7 @@ The application allows bank employees to manage clients, perform financial trans
 * Encapsulation
 * Classes and Objects
 * Static Members and Methods
+* Abstract Classes / Interfaces
 * File Handling (`fstream`)
 * Vectors (`vector`)
 * Enumerations (`enum`)
@@ -73,6 +75,7 @@ The application allows bank employees to manage clients, perform financial trans
 * `clsPerson.h`
 * `clsBankClient.h`
 * `clsUser.h`
+* `InterfaceCommunication.h`
 
 ### Utility Classes
 
@@ -154,7 +157,11 @@ or press:
 Ctrl + F5
 ```
 
-5. Log in using a valid username and password stored in `Users.txt`.
+5. Log in using a valid username and its original password (not the encrypted value shown in `Users.txt`).
+
+> Important: Passwords in `Users.txt` are stored in encrypted form, so the value written in the file is **not** the password you should type at login.
+
+> For the sample users included with this project, the actual password is `1234` unless you change it through the application or update the source data manually.
 
 > Note: User accounts and permissions are managed through the `Users.txt` file.
 
@@ -174,6 +181,8 @@ This project demonstrates:
 * Banking transaction processing
 * Multi-screen console application development
 * Transaction audit logging
+* Basic interface-based design using an abstract communication contract
+* Simple text encryption/decryption for persisted credentials
 
 ## Key OOP Concepts Applied
 
@@ -187,3 +196,5 @@ This project demonstrates:
 * Data abstraction
 * Access modifiers
 * Enumerations within classes
+* Abstract interfaces
+* Polymorphic contracts through pure virtual functions
