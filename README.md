@@ -2,7 +2,7 @@
 
 A console-based Bank Management System developed in C++ using Object-Oriented Programming (OOP) principles.
 
-The application allows bank employees to manage clients, perform financial transactions (including account transfers), track transfer history, and administer system users through a secure login system with permission-based access control. User passwords are stored in encrypted form in the data file, and the project also includes a practical example of using an abstract interface for communication-related behavior.
+The application allows bank employees to manage clients, perform financial transactions (including account transfers), track transfer history, administer system users through a secure login system with permission-based access control, and use a built-in currency exchange module for viewing currencies, searching currencies, updating exchange rates, and converting amounts between currencies. User passwords are stored in encrypted form in the data file, and the project also includes a practical example of using an abstract interface for communication-related behavior.
 
 ## Features
 
@@ -37,6 +37,16 @@ The application allows bank employees to manage clients, perform financial trans
 * List all users
 * Store user passwords in encrypted form inside `Users.txt`
 
+### Currency Exchange
+
+* List all available currencies
+* Find a currency by code or country
+* Update currency exchange rates
+* Convert amounts between currencies
+* Convert any currency amount to USD
+* Convert from one currency to another using USD as an intermediate base
+* Load and persist currency data using `Currencies.txt`
+
 ### Permission System
 
 * Role-based access control
@@ -51,6 +61,7 @@ The application allows bank employees to manage clients, perform financial trans
 * Users stored in `Users.txt` with encrypted passwords
 * Login history stored in `LoginRegister.txt`
 * Transfer history stored in `TransferLog.txt`
+* Currency data stored in `Currencies.txt`
 * Automatic file loading and saving
 
 ## Technologies Used
@@ -72,10 +83,11 @@ The application allows bank employees to manage clients, perform financial trans
 
 ### Core Classes
 
+* `InterfaceCommunication.h`
 * `clsPerson.h`
 * `clsBankClient.h`
 * `clsUser.h`
-* `InterfaceCommunication.h`
+* `clsCurrency.h`
 
 ### Utility Classes
 
@@ -106,6 +118,11 @@ The application allows bank employees to manage clients, perform financial trans
 * `clsDeleteUserScreen.h`
 * `clsUpdateUserScreen.h`
 * `clsFindUserScreen.h`
+* `clsCurrencyExchangeMainScreen.h`
+* `clsCurrenciesListScreen.h`
+* `clsFindCurrencyScreen.h`
+* `clsUpdateCurrencyRateScreen.h`
+* `clsCurrencyCalculatorScreen.h`
 
 ### Other Files
 
@@ -114,6 +131,7 @@ The application allows bank employees to manage clients, perform financial trans
 * `Users.txt`
 * `LoginRegister.txt`
 * `TransferLog.txt`
+* `Currencies.txt`
 * `main.cpp`
 
 ## Development Environment
@@ -131,6 +149,7 @@ Clients.txt
 Users.txt
 LoginRegister.txt
 TransferLog.txt
+Currencies.txt
 ```
 
 3. Build the project:
@@ -183,6 +202,7 @@ This project demonstrates:
 * Transaction audit logging
 * Basic interface-based design using an abstract communication contract
 * Simple text encryption/decryption for persisted credentials
+* File-based currency exchange and conversion workflows
 
 ## Key OOP Concepts Applied
 
@@ -198,3 +218,4 @@ This project demonstrates:
 * Enumerations within classes
 * Abstract interfaces
 * Polymorphic contracts through pure virtual functions
+* Domain modeling through specialized business classes
