@@ -8,6 +8,44 @@ User passwords are stored in encrypted form within the data files, and the proje
 
 ---
 
+## How to Run
+
+### Requirements
+
+Before running the project, make sure you have:
+
+- Visual Studio Code
+- The Microsoft **C/C++** extension for Visual Studio Code
+- CMake available on your system
+
+### Run the Application
+
+1. Clone or download the repository.
+2. Open a terminal inside the project folder.
+3. Open the project in Visual Studio Code:
+
+```powershell
+code .
+```
+
+4. Install the recommended Microsoft C/C++ extension if prompted.
+5. Press `F5` to build and run the application.
+
+### Sample Login
+
+Use the following full-access sample account:
+
+```text
+Username: User2
+Password: 1234
+```
+
+All sample users included with the project use the password **`1234`**, unless it has been changed through the application or directly in the data files.
+
+> **Important:** Passwords in `Users.txt` are stored in encrypted form. When logging in, enter the original password (`1234` for the sample accounts), not the encrypted value displayed in the file.
+
+---
+
 ## Features
 
 ### Client Management
@@ -125,62 +163,6 @@ cpp-bank-management-system/
 ├── main.cpp
 └── README.md
 ```
-
----
-
-## Development Environment
-
-This project was developed using **Microsoft Visual Studio** and utilizes Microsoft-specific C++ extensions such as `__declspec(property)`.
-
----
-
-## How to Run
-
-1. Open the project in Microsoft Visual Studio.
-
-2. Ensure the following files exist inside the `Data/` directory:
-
-```text
-Clients.txt
-Users.txt
-LoginRegister.txt
-TransferLog.txt
-Currencies.txt
-```
-
-3. Build the project:
-
-```text
-Build -> Build Solution
-```
-
-or press:
-
-```text
-Ctrl + Shift + B
-```
-
-4. Run the application:
-
-```text
-Debug -> Start Without Debugging
-```
-
-or press:
-
-```text
-Ctrl + F5
-```
-
-5. Log in using a valid username and its original password (not the encrypted value shown in `Users.txt`).
-
-> **Important:** Passwords stored in `Users.txt` are encrypted. Do **not** enter the encrypted value shown in the file when logging in.
-
-> **Sample Accounts:** All sample users included with this project use the password **`1234`** unless you change it through the application or edit the data files manually.
-
-> **Note:** User accounts and permissions are managed through `Users.txt`.
-
-> **Note:** This project uses Microsoft-specific C++ extensions and may require code modifications to compile with GCC/MinGW.
 
 ---
 

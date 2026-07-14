@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Bank Management System",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\Debug\\OOP_Bank_Management_System.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\Data",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "CMake: build (Debug)"
+        }
+    ]
+}
